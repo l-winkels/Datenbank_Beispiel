@@ -1,0 +1,44 @@
+﻿<Window x:Class="Datenbank_Beispiel.ConnectDBWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Datenbank_Beispiel"
+        mc:Ignorable="d"
+        Title="ConnectDBWindow" Height="360" Width="320">
+    <Grid x:Name="myGrid" Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">DB Name</Label>
+        <TextBox x:Name="dbNameBox" Grid.Row="0" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center" Text="{Binding DBName, Mode=TwoWay}"/>
+        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">DB Login</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center" Text="{Binding DBLogin, Mode=TwoWay}"/>
+        <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">DB Passwort</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center" Text="{Binding DBPassword, Mode=TwoWay}"/>
+        <Rectangle Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0 0 0 0" Width="270" Fill="White"  />
+        <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">Verbindungsstatus</Label>
+        <Label Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">unbekannt</Label>
+        
+        <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Center">Adressen anzeigen</Label>
+        <Button Grid.Row="5" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center">Anzeigen</Button>
+        <Label Grid.Row="6" Grid.Column="0" VerticalAlignment="Center">Adresse einfügen</Label>
+        <Button Grid.Row="6" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center">Einfügen</Button>
+        <Label Grid.Row="7" Grid.Column="0" VerticalAlignment="Center">Adresse löschen</Label>
+        <Button Grid.Row="7" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center">Löschen</Button>
+        <Label Grid.Row="8" Grid.Column="0" VerticalAlignment="Center">Datenbank löschen</Label>
+        <Button Grid.Row="8" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center">DB Löschen</Button>
+    </Grid>
+</Window>

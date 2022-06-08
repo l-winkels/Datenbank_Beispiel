@@ -1,0 +1,40 @@
+﻿<Window x:Class="Datenbank_Beispiel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Datenbank_Beispiel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320" Width="320">
+    <Grid x:Name="myGrid" Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Vorname</Label>
+        <Label x:Name="DBStatus" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="80" Height="20" FontSize="8" HorizontalContentAlignment="Center"  Background="Red">nicht verbunden</Label>
+        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Nachname</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center" Text="{Binding DBLogin, Mode=TwoWay}"/>
+        <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">DB Passwort</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center" Text="{Binding DBPassword, Mode=TwoWay}"/>
+        <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">Datenbank verbinden / trennen</Label>
+        <Button x:Name="DBButton" Grid.Row="3" Grid.Column="1" Height="20" Margin="10,0,10,10" VerticalAlignment="Bottom" Click="Button_Click">Verbinden</Button>
+        <Rectangle Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0 0 0 0" Width="270" Fill="White"  />
+        <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Center">Adressen anzeigen</Label>
+        <Button x:Name="AnzeigeButton" Grid.Row="5" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center" IsEnabled="False" Click="AnzeigeButton_Click">Anzeigen</Button>
+        <Label Grid.Row="6" Grid.Column="0" VerticalAlignment="Center">Adresse einfügen</Label>
+        <Button x:Name="EinfuegenButton" Grid.Row="6" Grid.Column="1" Margin="10,10,10,0" IsEnabled="False" Height="20" VerticalAlignment="Top" Click="InsertButton_Click">Einfügen</Button>
+        <Label Grid.Row="7" Grid.Column="0" VerticalAlignment="Center">Adresse löschen</Label>
+        <Button x:Name="LoeschenButton" Grid.Row="7" Grid.Column="1" Height="20" Margin="10 0 10 0" VerticalAlignment="Center" IsEnabled="False" Click="LoeschenButton_Click">Löschen</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window x:Class="Datenbank_Beispiel.InsertAddressDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"       
+        Title="Insert Address Data" Height="500" Width="330" Background="Gray">
+    <StackPanel Orientation="Vertical" Margin="0 20 0 20">
+        <Label FontSize="7">Vorname</Label>
+        <TextBox x:Name="FirstnameTextbox" Margin="10 0 0 0" Width="310" HorizontalAlignment="Left"/>
+        <Label FontSize="7">Nachname</Label>
+        <TextBox x:Name="LastnameTextbox" Margin="10 0 0 0" Width="310" HorizontalAlignment="Left"/>
+        <Label FontSize="7" Margin="0 5 0 0">Straße</Label>
+        <TextBox x:Name="StreetTextbox" Margin="10 0 0 0" Width="310" HorizontalAlignment="Left"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" FontSize="7" Margin="0,5,0,0">PLZ</Label>
+            <TextBox x:Name="ZipcodeTextbox" Grid.Row="1" Grid.Column="0" Width="200" Margin="10 0 0 0" HorizontalAlignment="Left"/>
+            <Label Grid.Row="0" Grid.Column="1" FontSize="7" Margin="10,5,0,0">Ort</Label>
+            <TextBox x:Name="CityTextbox" Grid.Row="1" Grid.Column="1" Width="200" Margin="20 0 0 0" HorizontalAlignment="Left"/>
+        </Grid>
+        <Label FontSize="7" Margin="0 5 0 0">Land</Label>
+        <ComboBox x:Name="CountryCombobox" Margin="10 0 0 0" Width="310" HorizontalAlignment="Left">
+            <ComboBoxItem IsSelected="True">Deutschland</ComboBoxItem>
+            <ComboBoxItem>Östereich</ComboBoxItem>
+            <ComboBoxItem>Schweiz</ComboBoxItem>
+        </ComboBox>
+        <Button HorizontalAlignment="Right" Width="100" Margin="10 20 10 10" Click="Insert_Click">Einfügen</Button>
+        <Label FontSize="7" Margin="0 5 0 0">Status</Label>
+        <TextBox x:Name="StatusTextBox" Width="310" Height="100" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+        <Button HorizontalAlignment="Right" Width="100" Margin="10 10 10 10" Click="Close_Click">Schließen</Button>
+    </StackPanel>
+</Window>

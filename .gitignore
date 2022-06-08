@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs
+/Datenbank_Beispiel/bin/Debug/net5.0-windows
+/Datenbank_Beispiel/obj
